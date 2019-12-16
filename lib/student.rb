@@ -58,10 +58,13 @@ class Student
   end
   
   def self.all_students_in_grade_9
-    Student.all.select{|x| x.grade.to_i == 9}
+    self.all.select{|x| x.grade.to_i == 9}
   end
   
   def self.students_below_12th_grade
     self.all.select{|x| x.grade.to_i < 12}
   end
+  
+  def self.first_X_students_in_grade_10(X)
+    self.all.select{|x| x.grade.to_i == 9}.first
 end
