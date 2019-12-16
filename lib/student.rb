@@ -73,7 +73,7 @@ class Student
     self.all.select{|x| x.grade.to_i == 10}.first
   end
   
-  def self.all_students_in_grade_X(X)
-    self.all.select{|x| x.grade.to_i == X}
+  def self.all_students_in_grade_X(n)
+    self.all.select{|x| x.grade.to_i == n}
   end
 end
