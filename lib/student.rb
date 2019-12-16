@@ -28,6 +28,7 @@ class Student
       from Students
       where name = ?
     SQL
+    DB[:conn].execute(sql).map { |s| self.new_from_db(s) }
   end
   
   def save
