@@ -66,5 +66,6 @@ class Student
   end
   
   def self.first_X_students_in_grade_10(X)
-    self.all.select{|x| x.grade.to_i == 9}.first
+    self.all.select{|x| x.grade.to_i == 9}.first(X)
+  end
 end
