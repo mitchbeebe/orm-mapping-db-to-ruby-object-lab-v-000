@@ -26,7 +26,7 @@ class Student
     sql = <<-SQL
       select *
       from Students
-      where name = '?'
+      where name = ?
     SQL
     DB[:conn].execute(sql, name).map { |s| self.new_from_db(s) }
   end
