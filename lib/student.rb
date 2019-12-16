@@ -58,6 +58,6 @@ class Student
   end
   
   def self.all_students_in_grade_9
-    self.all.select()
+    self.all.select{|x| x.grade == 9}
   end
 end
