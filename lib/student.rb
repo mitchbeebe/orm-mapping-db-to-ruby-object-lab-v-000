@@ -15,7 +15,7 @@ class Student
     # remember each row should be a new instance of the Student class
     s = <<-SQL
       select *
-      from students
+      from Students
     SQL
     DB[:conn].execute(s)
   end
